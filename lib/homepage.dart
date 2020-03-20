@@ -1,6 +1,7 @@
 import 'package:color_app/randomcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:color_app/widgets/colorcontainer.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -42,8 +43,8 @@ class _HomepageState extends State<Homepage> {
       body: Column(
         children: <Widget>[
           ColorContainer(bgColor: color1, hexValue: hexValue1),
-          ColorContainer(bgColor: color2, hexValue: hexValue1),
-          ColorContainer(bgColor: color3, hexValue: hexValue1),
+          ColorContainer(bgColor: color2, hexValue: hexValue2),
+          ColorContainer(bgColor: color3, hexValue: hexValue3),
           GestureDetector(
             onTap: () {
               setState(() {
@@ -53,17 +54,22 @@ class _HomepageState extends State<Homepage> {
             child: Container(
               width: double.infinity,
               height: 80.0,
-              color: Colors.orangeAccent,
+              color: Colors.blueGrey,
+              padding: EdgeInsets.only(bottom: 10.0),
               child: Center(
-                  child: Text(
-                'Generate',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25.0,
+                child: Text(
+                  'Generate',
+                  style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
                 ),
-              )),
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
