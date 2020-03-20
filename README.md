@@ -5,6 +5,6 @@
 
 # Screenshots
 
-<img src="Screenshots/screenshot1.png">
+<img src="Screenshots/Screenshot1.png" />
 
-<img src="Screenshots/screenshot2.png">
+<img src="Screenshots/Screenshot2.png" />
