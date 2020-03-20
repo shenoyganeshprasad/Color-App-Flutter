@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ColorContainer extends StatelessWidget {
   final Color bgColor;
@@ -11,9 +12,17 @@ class ColorContainer extends StatelessWidget {
         width: double.infinity,
         color: bgColor,
         child: Center(
-          child: Text(
-            "#" + hexValue,
-            style: TextStyle(fontSize: 18.0),
+          child: Opacity(
+            opacity: 0.8,
+            child: Text(
+              "#" + hexValue,
+              style: GoogleFonts.lato(
+                  textStyle: TextStyle(
+                fontSize: 32.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              )),
+            ),
           ),
         ),
       ),
