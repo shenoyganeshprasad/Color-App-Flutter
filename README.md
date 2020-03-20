@@ -1,6 +1,7 @@
 # Color App
 
-Generate Random Colors
+- Generate Random Colors
+- Long press to copy the hex value
 
 # Screenshots
 
