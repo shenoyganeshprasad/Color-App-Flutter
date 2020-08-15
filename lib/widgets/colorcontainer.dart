@@ -8,6 +8,7 @@ class ColorContainer extends StatelessWidget {
   final snackBar = SnackBar(
     behavior: SnackBarBehavior.floating,
     content: Text('Copied to Clipboard'),
+    duration: Duration(seconds: 2),
   );
   ColorContainer({@required this.bgColor, @required this.hexValue});
   @override
@@ -21,16 +22,18 @@ class ColorContainer extends StatelessWidget {
             opacity: 0.8,
             child: GestureDetector(
               onLongPress: () {
-                Clipboard.setData(new ClipboardData(text: hexValue));
+                Clipboard.setData(new ClipboardData(text: "#" + hexValue));
                 Scaffold.of(context).showSnackBar(snackBar);
               },
               child: Text(
                 "#" + hexValue,
                 style: GoogleFonts.lato(
-                    textStyle: TextStyle(
-                        fontSize: 32.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold)),
+                  textStyle: TextStyle(
+                    fontSize: 32.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ),

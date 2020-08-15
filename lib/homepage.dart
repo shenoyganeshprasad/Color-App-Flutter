@@ -15,14 +15,7 @@ class _HomepageState extends State<Homepage> {
   int endIndex = 16;
   @override
   void initState() {
-    color1 = generateRandomColor();
-    hexValue1 = color1.toString().substring(startIndex, endIndex).toUpperCase();
-
-    color2 = generateRandomColor();
-    hexValue2 = color2.toString().substring(startIndex, endIndex).toUpperCase();
-
-    color3 = generateRandomColor();
-    hexValue3 = color3.toString().substring(startIndex, endIndex).toUpperCase();
+    uniqueColor();
     super.initState();
   }
 
@@ -46,11 +39,7 @@ class _HomepageState extends State<Homepage> {
           ColorContainer(bgColor: color2, hexValue: hexValue2),
           ColorContainer(bgColor: color3, hexValue: hexValue3),
           GestureDetector(
-            onTap: () {
-              setState(() {
-                uniqueColor();
-              });
-            },
+            onTap: () => setState(() => uniqueColor()),
             child: Container(
               width: double.infinity,
               height: 80.0,
@@ -63,7 +52,7 @@ class _HomepageState extends State<Homepage> {
                     textStyle: TextStyle(
                       color: Colors.white,
                       fontSize: 25.0,
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
